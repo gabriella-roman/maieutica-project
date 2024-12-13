@@ -1,13 +1,12 @@
-import React from 'react';
+import React from 'react'
+import { AppRoutes } from './routes/routes.tsx'
 
 function App() {
   return (
     <div>
-      <header>
-        <h1>Maieutica</h1>
-      </header>
+      <AppRoutes />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
