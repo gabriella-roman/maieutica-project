@@ -1,0 +1,15 @@
+.cardText {
+    transition: all 0.3s ease;
+  }
+  
+  .collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .expanded {
+    display: block;
+  }
+  
