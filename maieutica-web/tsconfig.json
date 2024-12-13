@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",                          // Define a versão alvo do JavaScript.
+    "lib": ["dom", "es2015"],                 // Adiciona bibliotecas para o suporte ao DOM e ES2015.
+    "jsx": "react-jsx",                       // Habilita o JSX no React com a nova sintaxe (React 17+).
+    "strict": true,                           // Ativa todas as verificações estritas de tipo.
+    "moduleResolution": "node",               // Define o método de resolução de módulos.
+    "esModuleInterop": true,                  // Permite a interoperabilidade entre módulos CommonJS e ES.
+    "resolveJsonModule": true,                // Habilita a importação de arquivos JSON.
+    "module": "esnext",                       // Define o módulo como ESNext, útil para importações.
+    "skipLibCheck": true,                     // Pula a verificação de tipos de bibliotecas.
+    "forceConsistentCasingInFileNames": true, // Força o uso consistente de maiúsculas/minúsculas em nomes de arquivos.
+    "baseUrl": "src",                         // Define a base para resolução de módulos a partir da pasta `src`.
+    "paths": {
+      "*": ["node_modules/*", "src/*"]        // Permite que qualquer módulo seja resolvido a partir de `node_modules` ou da pasta `src`.
+    }
+  },
+  "include": [
+    "src/**/*"                               // Inclui todos os arquivos dentro da pasta `src`.
+  ],
+  "exclude": [
+    "node_modules",                          // Exclui a pasta `node_modules` da compilação.
+    "build"                                  // Exclui a pasta `build` da compilação.
+  ]
+}
