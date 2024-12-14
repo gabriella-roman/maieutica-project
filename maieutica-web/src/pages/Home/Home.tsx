@@ -157,7 +157,6 @@ export default function Home() {
         <LogoCarousel logos={logos} />
       </div>
 
-
       <div style={{
         gap: 18,
         display: 'flex',
@@ -190,7 +189,6 @@ export default function Home() {
           <SectionFeedback />
         </div>
       </div>
-
       <Footer />
     </div>
   )
