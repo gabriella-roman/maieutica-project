@@ -13,7 +13,8 @@
     "baseUrl": "src",                         // Define a base para resolução de módulos a partir da pasta `src`.
     "paths": {
       "*": ["node_modules/*", "src/*"]        // Permite que qualquer módulo seja resolvido a partir de `node_modules` ou da pasta `src`.
-    }
+    },
+    "typeRoots": ["node_modules/@types", "src/types"]
   },
   "include": [
     "src/**/*"                               // Inclui todos os arquivos dentro da pasta `src`.
