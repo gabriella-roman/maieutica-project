@@ -1,54 +1,195 @@
-import React from 'react'
+import { Header } from '../../components/Header/Header'
+import { Footer } from '../../components/Footer/Footer'
 import styles from './Home.module.css'
-import { Carousel } from '../../components/Carousel/Carousel'
-import image14 from '../../assets/images/image14.svg';
-import image15 from '../../assets/images/image15.svg';
-import image16 from '../../assets/images/image16.svg';
-import image17 from '../../assets/images/image17.svg';
-import image18 from '../../assets/images/image18.svg';
-import image19 from '../../assets/images/image19.svg';
-import { JobCard } from '../../components/JobCard/JobCard';
+import imageHome from '../../assets/images/image-homepage.jpg'
+import { useNavigate } from 'react-router-dom'
+import arrow from '../../assets/icons/arrow.svg'
+import { Section } from '../../components/Section/Section'
+import people from '../../assets/icons/people.svg'
+import { SectionFeedback } from '../../components/SectionFeedback/SectionFeedback'
+import imageFeedback from '../../assets/images/7b8991267d2927a40598b6e69321a4f3.jpg'
+import { InfoCard } from '../../components/InfoCard/InfoCard'
+import education from '../../assets/icons/school-1.svg'
+import psychology from '../../assets/icons/psychology.svg'
+import language from '../../assets/icons/language.svg'
+import transition from '../../assets/icons/diversity.svg'
+import help from '../../assets/icons/help.svg'
+import { LogoCarousel } from '../../components/LogoCarousel/LogoCarousel'
+import mobile from '../../assets/images/mobile.jpg'
+import beacon from '../../assets/images/beacon.jpg'
+import concept from '../../assets/images/escola-concept.jpg'
+import escolaVila from '../../assets/images/escola-da-vila.jpg'
+import augustLaranja from '../../assets/images/augusto-laranja.jpg'
+import sabin from '../../assets/images/colegio-albert-sabin.jpg'
 
 export default function Home() {
-  const images = [
-    { id: 1, src: image14, alt: 'Parceiro 1' },
-    { id: 2, src: image15, alt: 'Parceiro 2' },
-    { id: 3, src: image16, alt: 'Parceiro 3' },
-    { id: 4, src: image17, alt: 'Parceiro 4' },
-    { id: 5, src: image18, alt: 'Parceiro 5' },
-    { id: 6, src: image19, alt: 'Parceiro 6' },
-    { id: 7, src: image14, alt: 'Parceiro 7' },
-    { id: 8, src: image15, alt: 'Parceiro 8' },
-    { id: 9, src: image16, alt: 'Parceiro 9' },
-    { id: 10, src: image17, alt: 'Parceiro 10' },
-    { id: 11, src: image18, alt: 'Parceiro 11' },
-    { id: 12, src: image19, alt: 'Parceiro 12' }
-  ];
-
+  const navigate = useNavigate()
+  const logos = [
+    mobile,
+    beacon,
+    concept,
+    escolaVila,
+    augustLaranja,
+    sabin,
+    augustLaranja,
+    beacon,
+    escolaVila,
+    concept,
+    mobile,
+    sabin
+  ]
 
   return (
-    <div className={styles.container}>
-      <h1>Home</h1>
-      <div className={styles.content}>
-        <JobCard
-          title="Desenvolvedor Frontend"
-          description="<p>O Analista de Recrutamento e Seleção é responsável por identificar, atrair e selecionar talentos que se alinhem à cultura e às necessidades da empresa. Este profissional desempenha um papel crucial na construção de equipes de alto desempenho.</p><ul><li>Elaborar e revisar descrições de cargos em parceria com os gestores.</li><li>Divulgar oportunidades de emprego em diversas plataformas.</li><li>Realizar triagens de currículos e pré-seleções de candidatos.</li><li>Conduzir entrevistas por telefone e presenciais.</li><li>Aplicar testes e dinâmicas para avaliação de competências.</li><li>Manter atualizado o banco de currículos da empresa.</li><li>Elaborar relatórios sobre o processo de recrutamento.</li><li>Propor melhorias nos processos de seleção e integração.</li></ul>"
-          location="São Paulo, SP"
-          area="Tecnologia da Informação"
-          salary="to_match"
-          contractingRegime="CLT"
-          slugLink="https://www.exemplo.com/vaga/desenvolvedor-frontend"
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Header />
+
+      <div className={styles.container}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>
+            há 15 anos buscando os melhores educadores
+          </h1>
+
+          <button
+            className={styles.button}
+            onClick={() => navigate('/job-board')}
+          >
+            Ver todas as vagas
+
+            <img src={arrow} alt='Arrow' />
+          </button>
+        </div>
+
+        <img className={styles.image} src={imageHome} alt='Grupo de pessoas' />
+      </div>
+
+      <div style={{
+        gap: 18,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        marginBottom: 64,
+        paddingLeft: 72,
+        paddingRight: 72
+      }}>
+        <Section
+          category='CONECTANDO PESSOAS'
+          categoryColor='rgba(90, 158, 140, 1)'
+          title='Confira as vagas'
+          titleColor='rgba(206, 108, 57, 1)'
+          description='Entre em contato para tirar dúvidas, solicitar informações ou conversar com nossa equipe.<br/><br/> Estamos prontos para ajudar!'
+          descriptionColor='rgba(114, 114, 114, 1)'
         />
-        <JobCard
-          title="Desenvolvedor Frontend"
-          description="<p>•\tAdquirir conhecimento sobre os programas curriculares utilizados nas séries em que leciona (BNCC, currículo IBDP);</p><p>•\tTrabalhar colaborativamente com outros professores e lideranças da matéria e do segmento, buscando alinhamento e consistência;</p><p>•\tPlanejar as aulas e produzir materiais pedagógicos, levando em conta as individualidades dos alunos;</p><p>•\tMinistrar aulas de Biologia para alunos do Ensino Médio e do Fundamental 2, de forma alinhada com a BNCC, IBDP e o Material Didático selecionado pela escola (físico ou digital);</p><p>•\tUtilizar práticas variadas de ensino/aprendizagem, incluindo metodologias ativas, ensino responsivo, avaliação para o aprendizado (Assessment for Learning) e métodos investigativos;</p><p>•\tUtilizar de forma consistente tecnologias para enriquecer e melhorar o aprendizado;</p><p>•\tSupervisionar alunos em espaços escolares;</p><p>•\tSubstituir professores no mesmo segmento quando solicitado;</p><p>•\tMediar relacionamento entre crianças, famílias e escola;</p><p>•\tPreparar avaliações e comunicar os resultados;</p><p>•\tTabular e analisar dados pedagógicos com o intuito de ajustar ensino e melhorar o aprendizado;</p><p>•\tFormatar e alimentar com dados nossa plataforma de acompanhamento de avaliações (iSams) em preparação para relatórios para famílias;</p><p>•\tParticipar de reuniões pedagógicas (incluindo COC- Conselho de classe) e eventos realizados na escola;</p><p>•\tGarantir a segurança física e emocional dos alunos, e zelar pelo seu crescimento sócio-emocional (safeguarding).</p><p><br></p>"
-          location="São Paulo, SP"
-          area="Tecnologia da Informação"
-          salary={8000}
-          contractingRegime="CLT"
-          slugLink="https://www.exemplo.com/vaga/desenvolvedor-frontend"
+
+        <button
+          className={styles.button2}
+          onClick={() => navigate('/job-board')}
+        >
+          Ver todas as vagas
+
+          <img src={arrow} alt='Arrow' />
+        </button>
+      </div>
+
+      <div id='teste' style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '24px',
+        padding: '64px 72px',
+      }}>
+        <Section
+          icon={people}
+          iconAlt='Ícone de pessoas'
+          category='CONECTANDO PESSOAS'
+          categoryColor='rgba(90, 158, 140, 1)'
+          title='O que fazemos?'
+          titleColor='rgba(90, 158, 140, 1)'
+        />
+
+        <InfoCard
+          color='rgba(90, 158, 140, 1)'
+          icon={education}
+          text='PROCESSOS SELETIVOS PARA ESCOLAS'
+          description='Trabalho personalizado às características da escola e realizado por psicólogos especializados em seleção de educadores.'
+          link='/job-board'
+        />
+        <InfoCard
+          color='#E66B2B'
+          icon={psychology}
+          text='PERFIL PSICOLÓGICO'
+          description='É uma ferramenta de avaliação importantíssima na contratação de profissionais que lidam com pessoas.'
+          link='/profile-assessment'
+        />
+
+        <InfoCard
+          color='#004182'
+          icon={language}
+          text='AVALIAÇÃO DE FLUÊNCIA DO IDIOMA INGLÊS'
+          description='Analisamos a habilidade no idioma considerando fluência, compreensão, pronúncia e contexto, auxiliando no aprimoramento contínuo'
+          link='/language-assessment'
+        />
+        <InfoCard
+          color='#F6A623'
+          icon={transition}
+          text='APOIO À TRANSIÇÃO PROFISSIONAL (outplacement)'
+          description='Acolhemos e orientamos o profissional no momento sempre difícil do desligamento ou aposentadoria.'
+          link='/career-transition'
+        />
+        <InfoCard
+          color='#E66464'
+          icon={help}
+          text='APOIO À TRANSIÇÃO PROFISSIONAL (outplacement)'
+          description='Reflexão sobre sua carreira e intenções futuras, revisão do seu currículo e feedback sobre você e o mercado educacional.'
+          link='/career-transition'
         />
       </div>
+
+      <div
+        style={{
+          gap: 18,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          marginBottom: 64,
+          paddingLeft: 72,
+          paddingRight: 72
+        }}
+      >
+        <LogoCarousel logos={logos} />
+      </div>
+
+      <div style={{
+        gap: 18,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        marginBottom: 64,
+        paddingLeft: 72,
+        paddingRight: 72
+      }}>
+        <Section
+          icon={education}
+          iconColor='rgba(29, 66, 44, 1)'
+          iconAlt='Ícone de educação'
+          category='CONECTANDO PESSOAS'
+          categoryColor='rgba(29, 66, 44, 1)'
+          title='Feedback dos profissionais'
+          titleColor='rgba(206, 108, 57, 1)'
+        />
+
+        <div className={styles.feedbackContainer}>
+          <img
+            src={imageFeedback}
+            alt='Imagem'
+            style={{
+              width: 550,
+              objectFit: 'cover',
+              borderRadius: 30
+            }} />
+
+          <SectionFeedback />
+        </div>
+      </div>
+      <Footer />
     </div>
-  );
+  )
 }
