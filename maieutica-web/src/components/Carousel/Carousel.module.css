@@ -1,0 +1,51 @@
+.carouselContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .carouselWrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carouselInner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carouselItem {
+    flex: 0 0 calc(100% / 6); /* Exibe 6 imagens por vez */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  
+  #prevBtn {
+    left: 10px; /* Botão dentro do carrossel */
+  }
+  
+  #nextBtn {
+    right: 10px; /* Botão dentro do carrossel */
+  }
+  
