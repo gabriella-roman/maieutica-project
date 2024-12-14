@@ -21,6 +21,7 @@ import concept from '../../assets/images/escola-concept.jpg'
 import escolaVila from '../../assets/images/escola-da-vila.jpg'
 import augustLaranja from '../../assets/images/augusto-laranja.jpg'
 import sabin from '../../assets/images/colegio-albert-sabin.jpg'
+import { JobBoard } from '../../components/JobBoard/JobBoard'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -61,35 +62,41 @@ export default function Home() {
 
         <img className={styles.image} src={imageHome} alt='Grupo de pessoas' />
       </div>
-
       <div style={{
-        gap: 18,
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        marginBottom: 64,
-        paddingLeft: 72,
-        paddingRight: 72
+        justifyContent: 'space-between',
+        gap: '24px',
+        padding: '64px 72px',
       }}>
-        <Section
-          category='CONECTANDO PESSOAS'
-          categoryColor='rgba(90, 158, 140, 1)'
-          title='Confira as vagas'
-          titleColor='rgba(206, 108, 57, 1)'
-          description='Entre em contato para tirar dúvidas, solicitar informações ou conversar com nossa equipe.<br/><br/> Estamos prontos para ajudar!'
-          descriptionColor='rgba(114, 114, 114, 1)'
-        />
+        <div style={{
+          gap: 18,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          marginBottom: 64,
+          paddingLeft: 72,
+          paddingRight: 72
+        }}>
+          <Section
+            category='CONECTANDO PESSOAS'
+            categoryColor='rgba(90, 158, 140, 1)'
+            title='Confira as vagas'
+            titleColor='rgba(206, 108, 57, 1)'
+            description='Entre em contato para tirar dúvidas, solicitar informações ou conversar com nossa equipe.<br/><br/> Estamos prontos para ajudar!'
+            descriptionColor='rgba(114, 114, 114, 1)'
+          />
 
-        <button
-          className={styles.button2}
-          onClick={() => navigate('/job-board')}
-        >
-          Ver todas as vagas
+          <button
+            className={styles.button2}
+            onClick={() => navigate('/job-board')}
+          >
+            Ver todas as vagas
 
-          <img src={arrow} alt='Arrow' />
-        </button>
+            <img src={arrow} alt='Arrow' />
+          </button>
+        </div>
+        <JobBoard />
       </div>
-
       <div id='teste' style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',

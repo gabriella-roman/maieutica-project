@@ -58,7 +58,7 @@ export function JobCard(props: JobCardProps) {
     return (
         <div className={`card shadow-sm mb-4 ${styles.card} ${styles.textGreen}`}>
             <div className="card-body">
-                <h5 className={`card-title ${styles.textGreen}`}>{title.toLocaleUpperCase()}</h5>
+                <h5 className={`card-title ${styles.textGreen}`}>{title}</h5>
 
                 <div className={`${styles.cardContent} ${isExpanded ? styles.expanded : ''}`}>
                     <div
