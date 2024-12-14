@@ -34,18 +34,18 @@ export function Footer() {
 
         <div style={{ marginTop: 8 }}>
           <div>
-            <h1>E-mail</h1>
-            <p>contato@maieuticarh.com.br</p>
+            <h1 className={styles.h1}>E-mail</h1>
+            <p className={styles.p}>contato@maieuticarh.com.br</p>
           </div>
 
           <div>
-            <h1>Localização</h1>
-            <p>São Paulo - SP</p>
+            <h1 className={styles.h1}>Localização</h1>
+            <p className={styles.p}>São Paulo - SP</p>
           </div>
 
           <div>
-            <h1>CNPJ</h1>
-            <p>32.175.487/0001-30</p>
+            <h1 className={styles.h1}>CNPJ</h1>
+            <p className={styles.p}>32.175.487/0001-30</p>
           </div>
         </div>
       </div>
@@ -59,7 +59,6 @@ export function Footer() {
         <p>
           Soav Tech
         </p>
-
       </div>
     </div>
   )
