@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { JobCard, JobCardProps } from '../JobCard/JobCard';
 import api from '../../utils/api';
-import styles from './JobBoard.module.css';
+import styles from './JobBoardC.module.css';
 
-export function JobBoard() {
+export function JobBoardC() {
     const [jobs, setJobs] = useState<JobCardProps[]>([]); 
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState<string | null>(null); 
@@ -75,7 +75,7 @@ export function JobBoard() {
                             location={job.location}
                             area={job.area}
                             salary={job.salary}
-                            contractingRegime={job.contractingRegime}
+                            contractingRegime={job.contractingRegime.toLocaleUpperCase()}
                             slugLink={jobUrl} 
                         />
                     );

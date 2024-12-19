@@ -21,7 +21,7 @@ import concept from '../../assets/images/escola-concept.jpg'
 import escolaVila from '../../assets/images/escola-da-vila.jpg'
 import augustLaranja from '../../assets/images/augusto-laranja.jpg'
 import sabin from '../../assets/images/colegio-albert-sabin.jpg'
-import { JobBoard } from '../../components/JobBoard/JobBoard'
+import { JobBoardC } from '../../components/JobBoardC/JobBoardC'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -95,7 +95,7 @@ export default function Home() {
             <img src={arrow} alt='Arrow' />
           </button>
         </div>
-        <JobBoard />
+        <JobBoardC />
       </div>
       <div id='teste' style={{
         display: 'grid',

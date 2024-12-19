@@ -16,13 +16,8 @@ export function Section(props: SectionProps) {
   const { icon, category, title, iconAlt, description = '' } = props
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      gap: 4,
-      width: 400
-    }}>
+
+    <div className={styles.section}>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: icon ? 8 : 0 }}>
         {icon && <img src={icon} alt={iconAlt} style={{ height: 24, width: 24 }} />}
 
